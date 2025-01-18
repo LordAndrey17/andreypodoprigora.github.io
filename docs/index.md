@@ -12,4 +12,4 @@ tags:
 
 ## My points for studying in the course of EGR314 this semester
 1. To learn how to design and produce microelectronic systems and devices using microcontrollers like ESP32 and advanced curciut manufacturing techniques
-2. To design and create a cool and majectic project based on that knwoledge🤩!!!
+2. To design and create a cool and majectic project based on that knwoledge🤩!
