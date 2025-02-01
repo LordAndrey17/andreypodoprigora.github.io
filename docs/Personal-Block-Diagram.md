@@ -1,5 +1,5 @@
 ---
-title: Second Page
+title: Personal Block Diagram
 ---
 
-Things to discuss
+![diagram_01](PBD.png "Personal Block Diagram")
