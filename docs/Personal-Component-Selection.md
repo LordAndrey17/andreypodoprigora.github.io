@@ -1,5 +1,5 @@
 ---
-title: Component Selection Example
+title: Personal Component Selection
 ---
 ## 1. Major Component Selection
 
