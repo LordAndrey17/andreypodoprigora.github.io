@@ -24,7 +24,7 @@ The selected concept for the Spring 2025 semester project by team #204  is a bi-
 ## Proposed Microcontroller Solution: **PIC18F25Q10***
 
 | PIC MCU Info                                      | Answer |
-| --------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------- |
+| --------------------------------------------- | ------ |
 | Model                                         | PIC18F25Q10 <br> Packaging type: SOIC/28     |
 | Product Page URL                              | [link](https://www.microchip.com/en-us/product/pic18f25q10#Design%20Resources)                                    |
 | Datasheet URL(s)                              | [link](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F24-25-Q10-Data-Sheet-DS40001945.pdf)                                              |
