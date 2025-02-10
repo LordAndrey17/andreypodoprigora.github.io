@@ -432,7 +432,7 @@
       
         <li class="md-nav__item">
   <a href="#proposed-microcontroller-solution-pic18f25q10" class="md-nav__link">
-    Proposed Microcontroller Solution: PIC18F25Q10
+    Proposed Microcontroller Solution: PIC18F25Q10*
   </a>
   
 </li>
@@ -518,7 +518,7 @@
       
         <li class="md-nav__item">
   <a href="#proposed-microcontroller-solution-pic18f25q10" class="md-nav__link">
-    Proposed Microcontroller Solution: PIC18F25Q10
+    Proposed Microcontroller Solution: PIC18F25Q10*
   </a>
   
 </li>
@@ -578,93 +578,24 @@
 <h2 id="2-microcontroller-selection">2. Microcontroller Selection</h2>
 <h3 id="personal-role-within-the-team">Personal Role Within the Team</h3>
 <p>The selected concept for the Spring 2025 semester project by team #204  is a bi-wheeled robot with object-following capabilities. Within the scope of this project,  my primary responsibility area is focused around sensing functionality of the proposed robotic device. In this regard, I proposed the design involving placement of 3 identical Time-of-Flight(ToF) sensors in the frontal part of the robot, each directed outwards to the robot’s center  in order to increase the Field of View available to the device. The process of selecting the actual market-available sensor solution was performed earlier in this document(the final choice was identified to be VL53L4CD). In order to transfer the observed data to the Host MCU, all three sensors will be using a single I2C bus (the approximated communication speed is expected to vary between 0.75-1 MHz). After the data was received and pre-processed(e.g. unit conversion) by the Host MCU, it will then be transferred to the neighboring MCU in the systems’ UART daisy chain.</p>
-<h2 id="proposed-microcontroller-solution-pic18f25q10">Proposed Microcontroller Solution: PIC18F25Q10</h2>
-<table>
-<thead>
-<tr>
-<th>PIC MCU Info</th>
-<th>Answer</th>
-<th>Help</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Model</td>
-<td>PIC18F25Q10  SOIC/28</td>
-<td></td>
-</tr>
-<tr>
-<td>Product Page URL</td>
-<td><a href="https://www.microchip.com/en-us/product/pic18f25q10#Design%20Resources">link</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Datasheet URL(s)</td>
-<td><a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F24-25-Q10-Data-Sheet-DS40001945.pdf">link</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Application Notes URL(s)</td>
-<td><a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/Errata/PIC18F2425Q10-Silicon-Errata-Data-Sheet-Clarifications-DS80000797.pdf">link</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Vendor link</td>
-<td><a href="(https://www.microchip.com)">link</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Code Examples</td>
-<td><a href="https://github.com/microchip-pic-avr-examples?utf8=✓&amp;q=pic18f47q10&amp;type=&amp;language=">Github link</a> <br> <a href="https://mplabxpress.microchip.com/mplabcloud/example?author=microchip&amp;device=pic18f25q10">Microchip database link</a></td>
-<td></td>
-</tr>
-<tr>
-<td>External Resources URL(s)</td>
-<td>NONE AS FOR NOW</td>
-<td></td>
-</tr>
-<tr>
-<td>Unit cost</td>
-<td>$1.11</td>
-<td></td>
-</tr>
-<tr>
-<td>Supply Voltage Range</td>
-<td>1.8V to 5.5V</td>
-<td></td>
-</tr>
-<tr>
-<td>Absolute Maximum current <br> (for entire IC)</td>
-<td>?</td>
-<td>as found in datasheet</td>
-</tr>
-<tr>
-<td>Maximum GPIO current <br> (per pin)</td>
-<td>?</td>
-<td>as found in datasheet</td>
-</tr>
-<tr>
-<td>Supports External Interrupts?</td>
-<td>?</td>
-<td>as found in datasheet</td>
-</tr>
-<tr>
-<td>Required Programming Hardware, Cost, URL</td>
-<td>?</td>
-<td>found on the microcontroller's product page</td>
-</tr>
-<tr>
-<td>Works with MPLabX?</td>
-<td>Yes(chip is a direct product of Microchip)</td>
-<td></td>
-</tr>
-<tr>
-<td>Works with Microchip Code Configurator?</td>
-<td>Yes(chip is a direct product of Microchip)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<h2 id="proposed-microcontroller-solution-pic18f25q10">Proposed Microcontroller Solution: <strong>PIC18F25Q10</strong>*</h2>
+<p>| PIC MCU Info                                      | Answer |
+| --------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------- |
+| Model                                         | PIC18F25Q10 <br> Packaging type: SOIC/28     |
+| Product Page URL                              | <a href="https://www.microchip.com/en-us/product/pic18f25q10#Design%20Resources">link</a>                                    |
+| Datasheet URL(s)                              | <a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F24-25-Q10-Data-Sheet-DS40001945.pdf">link</a>                                              |
+| Application Notes URL(s)                      | <a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/Errata/PIC18F2425Q10-Silicon-Errata-Data-Sheet-Clarifications-DS80000797.pdf">link</a>                                              |
+| Vendor link                                   | <a href="(https://www.microchip.com)">link</a>                       |
+| Code Examples                                 | <a href="https://github.com/microchip-pic-avr-examples?utf8=✓&amp;q=pic18f47q10&amp;type=&amp;language=">Github link</a> <br> <a href="https://mplabxpress.microchip.com/mplabcloud/example?author=microchip&amp;device=pic18f25q10">Microchip link</a> |
+| External Resources URL(s)                     | <a href="https://www.northernsoftware.com/dev/pic18f/pic18f25q10.htm">link 1</a>                       |
+| Unit cost                                     | $1.11                                                            |
+| Supply Voltage Range                          | 1.8V to 5.5V                                                 |
+| Absolute Maximum current <br> (for entire IC) | 350 mA      |                                                                                      |
+| Maximum GPIO current <br> (per pin)           | ± 50 mA                                                                                     |
+| Supports External Interrupts?                 | Yes                                                                                     |
+| Required Programming Hardware, Cost, URL      | MPLAB® SNAP <br> cost: $14.99(also provided within EGR314 standart student kit) <br> <a href="https://www.microchip.com/en-us/development-tool/PG164100">URL</a>                                                               |
+| Works with MPLabX?                            | Yes(chip is a direct product of Microchip)                 |
+| Works with Microchip Code Configurator?       | Yes(chip is a direct product of Microchip)                                                         |</p>
 <table>
 <thead>
 <tr>
