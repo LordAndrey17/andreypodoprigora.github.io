@@ -42,15 +42,40 @@ The selected concept for the Spring 2025 semester project by team #204  is a bi-
 | Works with Microchip Code Configurator?       | Yes(chip is a direct product of Microchip)                                                         |
 
 
+## Program Modules Diagram
+
 | Module | # Available | Needed | Associated Pins (or * for any) |
 | ---------- | ----------- | ------ | ------------------------------ |
-| GPIO       | ?           | ?      | ?                              |
-| ADC        | ?           | ?      | ?                              |
-| UART       | ?           | ?      | ?                              |
-| SPI        | ?           | ?      | ?                              |
-| I2C        | ?           | ?      | ?                              |
-| PWM        | ?           | ?      | ?                              |
-| ICSP       | ?           | 1      | ?                              |
+| GPIO       | 11          | 3      | 2, 3, 4                        |
+| ADC        | -           | 0      | -                              |
+| UART       | 1           | 1      | 6, 7, 25, 26                   |
+| SPI        | -           | 0      | -                              |
+| I2C        | 2           | 1      | (22, 23) or (14, 15)           |
+| PWM        | -           | 0      | -                              |
+| ICSP       | 1           | 1      | 1, 27, 28                      |
 | ...        | ...         | ...    | ...                            |
+
+## Setting Up the Pinout Demonstration in MPLABX
+![MC_pins](MS_pins.png) 
+
+The picture above demonstrates the pin allocation in the PIC18F25Q10 MCU, proposed as the sensor subsystem microcontroller, performed within the MPLAB X software environment. The pin distribution goes as follows:
+UART => pins # 6, 7, 25, 26
+I2C => pins # 22, 23
+Red LED => pin # 2
+Green LED => pin # 3
+PushButton => pin # 4
+	
+The picture below demonstrates the results of “building” and preparing the project for a future debugging under the selected pin allocation
+
+![MC_build](MS_build.png) 
+
+As visible from the picture, the system analysis confirmed that every allocated pin is available for the assigned functional purpose. The UART and I2C serial communication pins were allocated to the pins, recommended in the MCU’s pin diagram, provided in the manufacturer’s datasheet.
+
+## Microcontroller Choice 
+### PIC18F25Q10 Selection Rationale
+I perceive the PIC18F25Q10 to be the optimal choice for the sensor subsystem of the robotic device proposed within our team’s project. While being a part of a high-performing PIC18 chip family, this chip hosts only 28 pins in comparison to the standard 40-pin PIC18F47Q10 chip that is used as a general purpose MCU within the EGR314 course. By excluding 12 excess pins, the PIC18F25Q10 will help to reduce the size of both the subsystem’s PCB and project’s device - which is definitely important, being reminded the context of the devices’ operation - mobile, fast-moving robot. Along with this, the selected MCU’s operating speed of 64 MHz will be capable of providing instant communication with both the UART-based neighbor MCU-s, and three ToF sensors, placed on a single I2C bus(each operating on approximate communication speed of 1MHz), while 2048 bytes of RAM and 32K bytes of Flash Memory will provide for the flawless processing of the data received from the mentioned sensors. 
+
+
+
 
 
