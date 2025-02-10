@@ -18,3 +18,40 @@ The type of sensor proposed and selected earlier for this semester’s group pro
 **Rationale:** A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.
 
 ## 2. Microcontroller Selection
+### Personal Role Within the Team 
+The selected concept for the Spring 2025 semester project by team #204  is a bi-wheeled robot with object-following capabilities. Within the scope of this project,  my primary responsibility area is focused around sensing functionality of the proposed robotic device. In this regard, I proposed the design involving placement of 3 identical Time-of-Flight(ToF) sensors in the frontal part of the robot, each directed outwards to the robot’s center  in order to increase the Field of View available to the device. The process of selecting the actual market-available sensor solution was performed earlier in this document(the final choice was identified to be VL53L4CD). In order to transfer the observed data to the Host MCU, all three sensors will be using a single I2C bus (the approximated communication speed is expected to vary between 0.75-1 MHz). After the data was received and pre-processed(e.g. unit conversion) by the Host MCU, it will then be transferred to the neighboring MCU in the systems’ UART daisy chain.
+
+## Proposed Microcontroller Solution: PIC18F25Q10
+
+| PIC MCU Info                                      | Answer | Help                                                                                                      |
+| --------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------- |
+| Model                                         | PIC18F25Q10  SOIC/28     |
+| Product Page URL                              | [link](https://www.microchip.com/en-us/product/pic18f25q10#Design%20Resources)                                    |
+| Datasheet URL(s)                              | ?      | Do not paste links directly into the table.  Use a [link](#)                                              |
+| Application Notes URL(s)                      | ?      | Do not paste links directly into the table.  Use a [link](#)                                              |
+| Vendor link                                   | ?      | Digikey, Jameco, etc.  Do not paste links directly into the table.  Use a [link](#)                       |
+| Code Examples                                 | ?      | url(s) for libraries on github or other sites related to the microcontroller and your planned peripherals |
+| External Resources URL(s)                     | ?      | Search on Google and YouTube for other resources for each specific microcontroller.                       |
+| Unit cost                                     | ?      | Find in the Microchip online store, or Digikey                                                            |
+| Absolute Maximum Current for entire IC        | ?      | Find in the microcontroller datasheet                                                                     |
+| Supply Voltage Range                          | ?      | Min / Nominal / Max / Absolute Max, as found in datasheet                                                 |
+| Absolute Maximum current <br> (for entire IC) | ?      | as found in datasheet                                                                                     |
+| Maximum GPIO current <br> (per pin)           | ?      | as found in datasheet                                                                                     |
+| Supports External Interrupts?                 | ?      | as found in datasheet                                                                                     |
+| Required Programming Hardware, Cost, URL      | ?      | found on the microcontroller's product page                                                               |
+| Works with MPLabX?                            | ?      | Required.  See [Microchip Development Tools](https://www.microchip.com/development-tools)                 |
+| Works with Microchip Code Configurator?       | ?      | Can be validated in MPLabX.  Screenshot required.                                                         |
+
+
+| Module | # Available | Needed | Associated Pins (or * for any) |
+| ---------- | ----------- | ------ | ------------------------------ |
+| GPIO       | ?           | ?      | ?                              |
+| ADC        | ?           | ?      | ?                              |
+| UART       | ?           | ?      | ?                              |
+| SPI        | ?           | ?      | ?                              |
+| I2C        | ?           | ?      | ?                              |
+| PWM        | ?           | ?      | ?                              |
+| ICSP       | ?           | 1      | ?                              |
+| ...        | ...         | ...    | ...                            |
+
+
