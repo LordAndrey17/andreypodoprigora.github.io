@@ -30,7 +30,7 @@ The selected concept for the Spring 2025 semester project by team #204  is a bi-
 | Datasheet URL(s)                              | [link](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F24-25-Q10-Data-Sheet-DS40001945.pdf)                                              |
 | Application Notes URL(s)                      | [link](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/Errata/PIC18F2425Q10-Silicon-Errata-Data-Sheet-Clarifications-DS80000797.pdf)                                              |
 | Vendor link                                   | [link]((https://www.microchip.com))                       |
-| Code Examples                                 | [Github link](https://github.com/microchip-pic-avr-examples?utf8=✓&q=pic18f47q10&type=&language=) [Microchip database link](https://mplabxpress.microchip.com/mplabcloud/example?author=microchip&device=pic18f25q10) |
+| Code Examples                                 | [Github link](https://github.com/microchip-pic-avr-examples?utf8=✓&q=pic18f47q10&type=&language=) <br> [Microchip database link](https://mplabxpress.microchip.com/mplabcloud/example?author=microchip&device=pic18f25q10) |
 | External Resources URL(s)                     | NONE AS FOR NOW                       |
 | Unit cost                                     | $1.11                                                            |
 | Supply Voltage Range                          | 1.8V to 5.5V                                                 |
