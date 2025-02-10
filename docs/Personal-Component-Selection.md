@@ -29,7 +29,7 @@ The selected concept for the Spring 2025 semester project by team #204  is a bi-
 | Product Page URL                              | [link](https://www.microchip.com/en-us/product/pic18f25q10#Design%20Resources)                                    |
 | Datasheet URL(s)                              | [link](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F24-25-Q10-Data-Sheet-DS40001945.pdf)                                              |
 | Application Notes URL(s)                      | [link](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/Errata/PIC18F2425Q10-Silicon-Errata-Data-Sheet-Clarifications-DS80000797.pdf)                                              |
-| Vendor link                                   | [link]((https://www.microchip.com))                       |
+| Vendor link                                   | [link](https://www.microchip.com)                       |
 | Code Examples                                 | [Github link](https://github.com/microchip-pic-avr-examples?utf8=✓&q=pic18f47q10&type=&language=) <br> [Microchip link](https://mplabxpress.microchip.com/mplabcloud/example?author=microchip&device=pic18f25q10) |
 | External Resources URL(s)                     | [link 1](https://www.northernsoftware.com/dev/pic18f/pic18f25q10.htm)                       |
 | Unit cost                                     | $1.11                                                            |
