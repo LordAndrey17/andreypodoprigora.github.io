@@ -1,6 +1,6 @@
 ## Introduction
 Welcome! This is the personal website of **Andrey Podoprigora**
-Here you can find all information regarding his individual contributions within the **Team 204** embedded system design project
+<br>Here you can find all information regarding his individual contributions within the **Team 204** embedded system design project
 
 ## Target Subsystem
 I am responcible for developing the **Sensor** subsystem of the current project
