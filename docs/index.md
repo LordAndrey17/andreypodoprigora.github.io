@@ -9,5 +9,5 @@ I am responcible for developing the **Sensor** subsystem of the current project
 - [Personal Block Diagram](Personal-Block-Diagram)
 - [Personal Component Selection]([Personal-Component-Selection)
 - [Personal Subsystem Schematics](Personal-Subsystem-Schematics)
-- [About Student](About_me)
+- [About Student](About-me)
 
