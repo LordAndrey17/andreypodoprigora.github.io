@@ -28,11 +28,11 @@ theme:
 #    - navigation.instant # doesn't work that well
 
 nav:
-  - Welcome page:
-    - About me: docs/Welcome_page/index.md
+  - Welcome page: index.md
   - Personal Block Diagram: Personal-Block-Diagram.md
   - Personal Component Selection: Personal-Component-Selection.md
   - Personal Subsystem Schematics: Personal-Subsystem-Schematics.md
+  - About Student: About-me.md
 
 markdown_extensions:
   - attr_list #add attributes using curly brackets to images, see https://squidfunk.github.io/mkdocs-material/reference/images/
