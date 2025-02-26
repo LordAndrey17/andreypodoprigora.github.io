@@ -29,7 +29,7 @@ theme:
 
 nav:
   - Welcome page:
-    - About me: Welcome_page/index.md
+    - About me: docs/Welcome_page/index.md
   - Personal Block Diagram: Personal-Block-Diagram.md
   - Personal Component Selection: Personal-Component-Selection.md
   - Personal Subsystem Schematics: Personal-Subsystem-Schematics.md
