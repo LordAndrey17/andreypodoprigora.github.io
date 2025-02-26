@@ -1,18 +1,13 @@
----
-title: Welcome!
-tags:
-- tag1
-- tag2
----
+## Introduction
+Welcome! This is the personal website of **Andrey Podoprigora**
+Here you can find all information regarding his individual contributions within the **Team 204** embedded system design project
 
-## Hi there, my name is Andrey😎!
-* I am currently a junior level student studying in Arizona State University!
-* My degree is Robotics(Robotic Enginnering), and I absolutely love it🦾
-* My home country is Kazakhstan! It is located in the very center of Eurasia, and obtains 9th place in the world by territory!
+## Target Subsystem
+I am responcible for developing the **Sensor** subsystem of the current project
 
-## My points of studying the course of EGR314 this semester
-1. To learn how to design and produce microelectronic systems and devices using microcontrollers like ESP32 and advanced curciut manufacturing techniques
-2. To design and create a cool and majectic project based on that knwoledge🤩!
+## On this website
+- [Personal Block Diagram](Personal-Block-Diagram)
+- [Personal Component Selection]([Personal-Component-Selection)
+- [Personal Subsystem Schematics](Personal-Subsystem-Schematics)
+- [About Student](About_me)
 
-## Contact info
-e-mail: apodopri@asu.edu
