@@ -36,11 +36,11 @@ Based on the data, presented in the chart above, the most reasonable choice for 
 ## Declaration of Personal Role & Responsibilities Within the Team 
 The selected concept for the Spring 2025 semester project by team #204  is a bi-wheeled robot with object-following capabilities. Within the scope of this project, my primary responsibility area is focused around **sensing functionality** of the proposed robotic device. In this regard, I proposed the design involving placement of 3 identical Time-of-Flight(ToF) sensors in the frontal part of the robot, each directed outwards to the robot’s center  in order to increase the Field of View available to the device. The process of selecting the actual market-available sensor solution was performed earlier in this document(the final choice was identified to be VL53L4CD). In order to transfer the observed data to the Host MCU, all three sensors will be using a single I2C bus (the approximated communication speed is expected to vary between 0.75-1 MHz). After the data was received and pre-processed(e.g. unit conversion) by the Host MCU, it will then be transferred to the neighboring MCU in the systems’ UART daisy chain.
 
-## Proposed Microcontroller Solution: **PIC18F25Q10***
+## Proposed Microcontroller Solution: **PIC18F26Q10***
 
 | PIC MCU Info                                      | Answer |
 | --------------------------------------------- | ------ |
-| Model                                         | ![PIC18F25Q10 SOIC/28](PIC18F25Q10.png) <br> <br> PIC18F25Q10 <br> Packaging type: SOIC/28     |
+| Model                                         | ![PIC18F26Q10 SOIC/28](PIC18F25Q10.png) <br> <br> PIC18F25Q10 <br> Packaging type: SOIC/28     |
 | Product Page URL                              | [link](https://www.microchip.com/en-us/product/pic18f25q10#Design%20Resources)                                    |
 | Datasheet URL(s)                              | [link](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F24-25-Q10-Data-Sheet-DS40001945.pdf)                                              |
 | Application Notes URL(s)                      | [link](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/Errata/PIC18F2425Q10-Silicon-Errata-Data-Sheet-Clarifications-DS80000797.pdf)                                              |
@@ -87,8 +87,12 @@ The picture below demonstrates the results of “building” and preparing the p
 As visible from the picture, the system analysis confirmed that every allocated pin is available for the assigned functional purpose. The UART and I2C serial communication pins were allocated to the pins, recommended in the MCU’s pin diagram, provided in the manufacturer’s datasheet.
 
 ## Microcontroller Choice 
-### PIC18F25Q10 Selection Rationale
-I perceive the PIC18F25Q10 to be the optimal choice for the sensor subsystem of the robotic device proposed within our team’s project. While being a part of a high-performing PIC18 chip family, this chip hosts only 28 pins in comparison to the standard 40-pin PIC18F47Q10 chip that is used as a general purpose MCU within the EGR314 course. By excluding 12 excess pins, the PIC18F25Q10 will help to reduce the size of both the subsystem’s PCB and project’s device - which is definitely important, being reminded the context of the devices’ operation - mobile, fast-moving robot. Along with this, the selected MCU’s operating speed of 64 MHz will be capable of providing instant communication with both the UART-based neighbor MCU-s, and three ToF sensors, placed on a single I2C bus(each operating on approximate communication speed of 1MHz), while 2048 bytes of RAM and 32K bytes of Flash Memory will provide for the flawless processing of the data received from the mentioned sensors. 
+### PIC18F26Q10 Selection Rationale
+I perceive the PIC18F26Q10 to be the optimal choice for the sensor subsystem of the robotic device proposed within our team’s project. While being a part of a high-performing PIC18 chip family, this chip hosts only 28 pins in comparison to the standard 40-pin PIC18F47Q10 chip that is used as a general purpose MCU within the EGR314 course. By excluding 12 excess pins, the PIC18F26Q10 will help to reduce the size of both the subsystem’s PCB and project’s device - which is definitely important, being reminded the context of the devices’ operation - mobile, fast-moving robot. Along with this, the selected MCU’s operating speed of 64 MHz will be capable of providing instant communication with both the UART-based neighbor MCU-s, and three ToF sensors, placed on a single I2C bus(each operating on approximate communication speed of 1MHz), while 2048 bytes of RAM and 32K bytes of Flash Memory will provide for the flawless processing of the data received from the mentioned sensors. 
+
+# Power Budget
+
+![Power_Budget](Power_Budget.png)
 
 
 
