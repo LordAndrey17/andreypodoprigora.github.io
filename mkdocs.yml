@@ -33,6 +33,7 @@ nav:
   - Personal Component Selection: Personal-Component-Selection.md
   - Personal Subsystem Schematics: Personal-Subsystem-Schematics.md
   - Personal Bill of Materials: Personal-Bill-of-Materials.md
+  - Personal API: Personal-API.md
   - About Student: About-me.md
 
 markdown_extensions:
