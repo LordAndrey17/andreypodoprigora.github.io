@@ -60,32 +60,32 @@ Each table demonstrates the message structure with along with a description of h
 
 - <COMMENT>
 
-### Messages I Recieve
+## Messages Transmitted to the Sensor Subsystem
 
-These are the messages that I can recieve from my teammates. The tables show the message structure along with a description of the message and who I would recieve the message from.
+These are messages that the Sensor Subsystem receives from other subsystems of the device.
+Each table demonstrates the message structure with along with a description of how it works and who is responcible for transmitting each type of message.
 
-#### Update Displayed Following Distance
+### Change Distance Keeping Threshold to X
 | Type | Byte 1 | Byte 2 |
 | ---- | ------ | ------ |
-| Variable Name | message_type | display_distance |
+| Variable Name | message_type | distance_treshold |
 | Variable Type | uint8_t | uint8_t |
 | Min Value | 0 | 0 |
-| Max Value | 9 | 100 |
-| Example | 1 | 20 |
+| Max Value | 8 | 100 |
+| Example | 3 | 25 |
 
-- This message that I recieve will allow my system to update the displayed speed on the OLED screen. Byte 1 is the message type allowing my system to easily figure out what the message will be. Then byte 2 is the new distance that I will be displaying OLED screen. I will recieve this message from Divine.
+- <COMMENT>
 
-#### Update Displayed Motor Speed
-| Type | Byte 1 | Byte 2 |
-| ---- | ------ | ------ |
-| Variable Name | message_type | display_speed |
-| Variable Type | uint8_t | int8_t |
-| Min Value | 0 | -100 |
-| Max Value | 9 | 100 |
-| Example | 0 | 50 |
+### Start / Stop Subsystem Z
+| Type | Byte 1 | Byte 2 | Byte 3 |
+| ---- | ------ | ------ | ------ |
+| Variable Name | message_type | target_subsystem | control_signal |
+| Variable Type | uint8_t | uint8_t | uint8_t |
+| Min Value | 0 | 1 | 0 |
+| Max Value | 8 | 4 | 1 |
+| Example | 1 | 3 | 1 |
 
-- This message that I recieve allows my system to update the displayed motor speed to the OLED screen. Byte 1 is the message type allowing my system to easily sort the message. Byte 2 is the new speed that the OLED screen will be displaying. I will recieve this message from Divine.
-
+- <COMMENT>
 
 ### Other Types of Messages
 
