@@ -739,9 +739,10 @@ Each table demonstrates the message structure with along with a description of h
 <ul>
 <li><COMMENT></li>
 </ul>
-<h3 id="messages-i-recieve">Messages I Recieve</h3>
-<p>These are the messages that I can recieve from my teammates. The tables show the message structure along with a description of the message and who I would recieve the message from.</p>
-<h4 id="update-displayed-following-distance">Update Displayed Following Distance</h4>
+<h2 id="messages-transmitted-to-the-sensor-subsystem">Messages Transmitted to the Sensor Subsystem</h2>
+<p>These are messages that the Sensor Subsystem receives from other subsystems of the device.
+Each table demonstrates the message structure with along with a description of how it works and who is responcible for transmitting each type of message.</p>
+<h3 id="change-distance-keeping-threshold-to-x">Change Distance Keeping Threshold to X</h3>
 <table>
 <thead>
 <tr>
@@ -754,7 +755,7 @@ Each table demonstrates the message structure with along with a description of h
 <tr>
 <td>Variable Name</td>
 <td>message_type</td>
-<td>display_distance</td>
+<td>distance_treshold</td>
 </tr>
 <tr>
 <td>Variable Type</td>
@@ -768,58 +769,64 @@ Each table demonstrates the message structure with along with a description of h
 </tr>
 <tr>
 <td>Max Value</td>
-<td>9</td>
+<td>8</td>
 <td>100</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>3</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><COMMENT></li>
+</ul>
+<h3 id="start-stop-subsystem-z">Start / Stop Subsystem Z</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Byte 1</th>
+<th>Byte 2</th>
+<th>Byte 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>message_type</td>
+<td>target_subsystem</td>
+<td>control_signal</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+</tr>
+<tr>
+<td>Min Value</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Max Value</td>
+<td>8</td>
+<td>4</td>
+<td>1</td>
 </tr>
 <tr>
 <td>Example</td>
 <td>1</td>
-<td>20</td>
+<td>3</td>
+<td>1</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>This message that I recieve will allow my system to update the displayed speed on the OLED screen. Byte 1 is the message type allowing my system to easily figure out what the message will be. Then byte 2 is the new distance that I will be displaying OLED screen. I will recieve this message from Divine.</li>
-</ul>
-<h4 id="update-displayed-motor-speed">Update Displayed Motor Speed</h4>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Byte 1</th>
-<th>Byte 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Variable Name</td>
-<td>message_type</td>
-<td>display_speed</td>
-</tr>
-<tr>
-<td>Variable Type</td>
-<td>uint8_t</td>
-<td>int8_t</td>
-</tr>
-<tr>
-<td>Min Value</td>
-<td>0</td>
-<td>-100</td>
-</tr>
-<tr>
-<td>Max Value</td>
-<td>9</td>
-<td>100</td>
-</tr>
-<tr>
-<td>Example</td>
-<td>0</td>
-<td>50</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>This message that I recieve allows my system to update the displayed motor speed to the OLED screen. Byte 1 is the message type allowing my system to easily sort the message. Byte 2 is the new speed that the OLED screen will be displaying. I will recieve this message from Divine.</li>
+<li><COMMENT></li>
 </ul>
 <h3 id="other-types-of-messages">Other Types of Messages</h3>
 <ul>
