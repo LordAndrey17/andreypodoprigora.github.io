@@ -510,13 +510,48 @@ Below I present the API specification of the messages received/transmitted by th
 <p>These are messages that the Sensor Subsystem transmits to the rest of the device subsystems.
 Each table demonstrates the message structure with along with a description of how it works and who will recieve the message.</p>
 <h3 id="set-motor-1-to-speed-x-and-motor-2-to-speed-y">Set Motor 1 to Speed X and Motor 2 to Speed Y</h3>
-<p>| Type | Byte 1 | Byte 2 | Byte 3 |
-| ---- | ------ | ------ |
-| Variable Name | message_type | motor_1_speed | motor_2_speed |
-| Variable Type | uint8_t | uint8_t | uint8_t |
-| Min Value | 0 | 0 | 0 |
-| Max Value | 8 | 100 | 100 |
-| Example | 2 | 25 | 75 |</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Byte 1</th>
+<th>Byte 2</th>
+<th>Byte 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>message_type</td>
+<td>motor_1_speed</td>
+<td>motor_2_speed</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+</tr>
+<tr>
+<td>Min Value</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Max Value</td>
+<td>8</td>
+<td>100</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>2</td>
+<td>25</td>
+<td>75</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><COMMENT></li>
 </ul>
