@@ -604,9 +604,10 @@ Each table demonstrates the message structure with along with a description of h
 </tr>
 </tbody>
 </table>
-<ul>
-<li><COMMENT></li>
-</ul>
+<p><strong>Sent to:</strong> <br>
+Motor subsystem(Jacob) <br>
+<strong>Purpose:</strong> <br>
+This message is designed to provide the Motor(Actuator) Subsystem with the relevant data for configuring/adjusting the target-chasing movement and trajectory of the project's robot. Since the Motor Subsystem incorporates a double-motor based design, the message contains two variables, describing the desired speed levels for each of the two motors, calculated beforehand within the operational range of the Sensor subsystem. The mentioned speed values are expressed in the form of an unsigned integer numbers representing percent levels between 0 and 100, such that 0 is a 0% and 100 is 100%.</p>
 <h3 id="update-displayed-tracking-distance-x">Update Displayed Tracking Distance X</h3>
 <table>
 <thead>
@@ -644,9 +645,10 @@ Each table demonstrates the message structure with along with a description of h
 </tr>
 </tbody>
 </table>
-<ul>
-<li><COMMENT></li>
-</ul>
+<p><strong>Sent to:</strong> <br>
+UI subsystem(Jake), Wi-fi subsystem(Divine) <br>
+<strong>Purpose:</strong> <br>
+The single purpose of this message is to deliver data on the currently-observed distance between the robot and a tracking object to the built-in User Interface (UI) as well as to any relevant external UI-s (e.g. pc monitor, laptop, phone screen), accessible thorugh the Wi-fi communication. Aside from the identifiction bytem it contains only one uint_8 type variable, representing the observed distance in cm("0" -&gt; 0 cm, "65" -&gt; 65 cm)</p>
 <h3 id="subsystem-z-status-report">Subsystem Z Status Report</h3>
 <table>
 <thead>
@@ -690,9 +692,10 @@ Each table demonstrates the message structure with along with a description of h
 </tr>
 </tbody>
 </table>
-<ul>
-<li><COMMENT></li>
-</ul>
+<p><strong>Sent to:</strong> <br>
+UI subsystem(Jake), Wi-fi subsystem(Divine) <br>
+<strong>Purpose:</strong> <br>
+This type of messages is responsible for reporting the currently-observed status of the Sensor Subsystem to the various User Interfaces for maintenance, debugging and/or operation control purposes. The status-related data is delivered through a single uint8 variable, capable of taking values from (1) to (Max Value), with each number representing one and only type of a Sensor Subsystem condition; f.e. : "2" -&gt; "Sensor subsystem is currently transmitting data to the Motor Subsystem", "5" -&gt; "1 sensor is successfully observing the target object", "6" - "2 sensors are successfully observing the target object"</p>
 <h3 id="subsystem-z-error-report">Subsystem Z Error Report</h3>
 <table>
 <thead>
@@ -736,52 +739,13 @@ Each table demonstrates the message structure with along with a description of h
 </tr>
 </tbody>
 </table>
-<ul>
-<li><COMMENT></li>
-</ul>
-<h2 id="messages-transmitted-to-the-sensor-subsystem">Messages Transmitted to the Sensor Subsystem</h2>
+<p><strong>Sent to:</strong> <br>
+UI subsystem(Jake), Wi-fi subsystem(Divine) <br>
+<strong>Purpose:</strong> <br>
+This type of messages is responsible for reporting the currently-registered errors of the Sensor Subsystem to the various User Interfaces for maintenance, debugging and/or operation control purposes. The error-related data is delivered through a single uint8 variable, capable of taking values from (1) to (Max Value), with each number representing one and only type of a Sensor Subsystem error; f.e. : "2" -&gt; "First sensor is not responding", "3" -&gt; "Second sensor is not responding", "6" - "Sensors #1 and #3 are not responding"</p>
+<h2 id="messages-received-by-the-sensor-subsystem">Messages Received by the Sensor Subsystem</h2>
 <p>These are messages that the Sensor Subsystem receives from other subsystems of the device.
 Each table demonstrates the message structure with along with a description of how it works and who is responcible for transmitting each type of message.</p>
-<h3 id="change-distance-keeping-threshold-to-x">Change Distance Keeping Threshold to X</h3>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Byte 1</th>
-<th>Byte 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Variable Name</td>
-<td>message_type</td>
-<td>distance_treshold</td>
-</tr>
-<tr>
-<td>Variable Type</td>
-<td>uint8_t</td>
-<td>uint8_t</td>
-</tr>
-<tr>
-<td>Min Value</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Max Value</td>
-<td>8</td>
-<td>100</td>
-</tr>
-<tr>
-<td>Example</td>
-<td>3</td>
-<td>25</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><COMMENT></li>
-</ul>
 <h3 id="start-stop-subsystem-z">Start / Stop Subsystem Z</h3>
 <table>
 <thead>
@@ -825,9 +789,51 @@ Each table demonstrates the message structure with along with a description of h
 </tr>
 </tbody>
 </table>
-<ul>
-<li><COMMENT></li>
-</ul>
+<p><strong>Received from:</strong> <br>
+UI subsystem(Jake), Wi-fi subsystem(Divine) <br>
+<strong>Purpose:</strong> <br>
+The message with an exclusive capability to externally "turn off"(put in a software sleep mode), as well as "turn on"(awake from the software sleep mode) various subsystems of the device, including the Sensor-elated one. Because the message type is designed to be utilised with multiple subsystems, the sender is required not only to specify the control signal(on/off), but also point out to the target subsystem through a code based uint8 variable(e.g. "1" -&gt; "Motor Subsystem", "2" -&gt; "Sensor Subsystem")</p>
+<h3 id="change-distance-keeping-threshold-to-x">Change Distance Keeping Threshold to X</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Byte 1</th>
+<th>Byte 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>message_type</td>
+<td>distance_treshold</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+</tr>
+<tr>
+<td>Min Value</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Max Value</td>
+<td>8</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>3</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Received from:</strong> <br>
+UI subsystem(Jake), Wi-fi subsystem(Divine) <br>
+<strong>Purpose:</strong> <br>
+The message type that configures the distance keeping trechold value for the object-tracking operations within the Sensor Subsystem. Can be sent from both external and internal UI-s, requires a uint8-type variable specifying the desired treshold value in cm ("0" -&gt; 0cm, "100" -&gt; 100cm)</p>
 <h3 id="other-types-of-messages">Other Types of Messages</h3>
 <ul>
 <li>Any message that I recieve that I do not have a protocol to handle the system will delete the message to help clean up the system and reduce clogging.</li>
