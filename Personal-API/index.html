@@ -509,7 +509,18 @@ Below I present the API specification of the messages received/transmitted by th
 <h2 id="messages-transmitted-by-the-sensor-subsystem">Messages Transmitted by the Sensor Subsystem</h2>
 <p>These are messages that the Sensor Subsystem transmits to the rest of the device subsystems.
 Each table demonstrates the message structure with along with a description of how it works and who will recieve the message.</p>
-<h3 id="change-following-distance">Change Following Distance</h3>
+<h3 id="set-motor-1-to-speed-x-and-motor-2-to-speed-y">Set Motor 1 to Speed X and Motor 2 to Speed Y</h3>
+<p>| Type | Byte 1 | Byte 2 | Byte 3
+| ---- | ------ | ------ |
+| Variable Name | message_type | motor_1_speed | motor_2_speed |
+| Variable Type | uint8_t | uint8_t | uint8_t
+| Min Value | 0 | 0 | 0
+| Max Value | 8 | 100 | 100
+| Example | 2 | 25 | 75</p>
+<ul>
+<li><COMMENT></li>
+</ul>
+<h3 id="update-displayed-tracking-distance-x">Update Displayed Tracking Distance X</h3>
 <table>
 <thead>
 <tr>
@@ -522,7 +533,7 @@ Each table demonstrates the message structure with along with a description of h
 <tr>
 <td>Variable Name</td>
 <td>message_type</td>
-<td>set_distance</td>
+<td>tracking_distance</td>
 </tr>
 <tr>
 <td>Variable Type</td>
@@ -536,60 +547,20 @@ Each table demonstrates the message structure with along with a description of h
 </tr>
 <tr>
 <td>Max Value</td>
-<td>9</td>
+<td>8</td>
 <td>100</td>
 </tr>
 <tr>
 <td>Example</td>
-<td>1</td>
-<td>20</td>
+<td>5</td>
+<td>65</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>This message sets the distance at which the robot is supposed to stay away from the object it is detecting. The message begins with byte one, the message type, allowing the reciever to sort the message easier, then byte 2 is the value of the distance that the robot is supposed to keep away from the object its tracking. The set_distance value does not directly communicate with sensors or motor it only states the distance goal that the robot is supposed to keep. This message will be sent to both Andrey and Divine's subsystems that they will use accordingly.</li>
+<li><COMMENT></li>
 </ul>
-<h4 id="change-motor-speed">Change Motor Speed</h4>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Byte 1</th>
-<th>Byte 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Variable Name</td>
-<td>message_type</td>
-<td>motor_speed</td>
-</tr>
-<tr>
-<td>Variable Type</td>
-<td>uint8_t</td>
-<td>int8_t</td>
-</tr>
-<tr>
-<td>Min Value</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Max Value</td>
-<td>9</td>
-<td>100</td>
-</tr>
-<tr>
-<td>Example</td>
-<td>0</td>
-<td>50</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>This message changes the speed at which the motors will move at. The message begins with the message type allowing the reciever to sort the message easier, then byte 2 is the target speed at which the motor will travel at. The speed value does not control the motor directly just states at what speed all the motors will move at. The message will send to both Divine and Jacob's subsystem and they will update accordingly.</li>
-</ul>
-<h4 id="drive-individual-motor">Drive Individual motor</h4>
+<h3 id="subsystem-z-status-report">Subsystem Z Status Report</h3>
 <table>
 <thead>
 <tr>
@@ -603,37 +574,83 @@ Each table demonstrates the message structure with along with a description of h
 <tr>
 <td>Variable Name</td>
 <td>message_type</td>
-<td>motor_id</td>
-<td>motor_speed</td>
+<td>sender_id</td>
+<td>status_code</td>
 </tr>
 <tr>
 <td>Variable Type</td>
 <td>uint8_t</td>
 <td>uint8_t</td>
-<td>int8_t</td>
+<td>uint8_t</td>
 </tr>
 <tr>
 <td>Min Value</td>
 <td>0</td>
 <td>1</td>
-<td>0</td>
+<td>1</td>
 </tr>
 <tr>
 <td>Max Value</td>
-<td>9</td>
-<td>2</td>
-<td>100</td>
+<td>8</td>
+<td>4</td>
+<td>25</td>
 </tr>
 <tr>
 <td>Example</td>
-<td>0</td>
-<td>1</td>
-<td>30</td>
+<td>7</td>
+<td>2</td>
+<td>21</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>This message is for driving the motors independently so that the user can directly control the motors using the buttons on the robot. Byte 1 in the message is the meesage type allowing the reciever to sort the message easier. Then byte 2 is the motor_id to select which motor the message is targeting. Byte 3 is the speed at which the motor will be moving at. This message would be sent to Jacob's subsytem.</li>
+<li><COMMENT></li>
+</ul>
+<h3 id="subsystem-z-error-report">Subsystem Z Error Report</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Byte 1</th>
+<th>Byte 2</th>
+<th>Byte 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>message_type</td>
+<td>sender_id</td>
+<td>error_code</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+</tr>
+<tr>
+<td>Min Value</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Max Value</td>
+<td>8</td>
+<td>4</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>8</td>
+<td>3</td>
+<td>21</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><COMMENT></li>
 </ul>
 <h3 id="messages-i-recieve">Messages I Recieve</h3>
 <p>These are the messages that I can recieve from my teammates. The tables show the message structure along with a description of the message and who I would recieve the message from.</p>
