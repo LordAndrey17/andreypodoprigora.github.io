@@ -16,39 +16,49 @@ Below I present the API specification of the messages received/transmitted by th
 These are messages that the Sensor Subsystem transmits to the rest of the device subsystems.
 Each table demonstrates the message structure with along with a description of how it works and who will recieve the message.
 
-### Change Following Distance
+### Set Motor 1 to Speed X and Motor 2 to Speed Y
+| Type | Byte 1 | Byte 2 | Byte 3
+| ---- | ------ | ------ |
+| Variable Name | message_type | motor_1_speed | motor_2_speed |
+| Variable Type | uint8_t | uint8_t | uint8_t
+| Min Value | 0 | 0 | 0
+| Max Value | 8 | 100 | 100
+| Example | 2 | 25 | 75
+
+- <COMMENT>
+
+### Update Displayed Tracking Distance X		
 | Type | Byte 1 | Byte 2 |
 | ---- | ------ | ------ |
-| Variable Name | message_type | set_distance |
+| Variable Name | message_type | tracking_distance |
 | Variable Type | uint8_t | uint8_t |
 | Min Value | 0 | 0 |
-| Max Value | 9 | 100 |
-| Example | 1 | 20 |
+| Max Value | 8 | 100 |
+| Example | 5 | 65 |
 
-- This message sets the distance at which the robot is supposed to stay away from the object it is detecting. The message begins with byte one, the message type, allowing the reciever to sort the message easier, then byte 2 is the value of the distance that the robot is supposed to keep away from the object its tracking. The set_distance value does not directly communicate with sensors or motor it only states the distance goal that the robot is supposed to keep. This message will be sent to both Andrey and Divine's subsystems that they will use accordingly.
+- <COMMENT>
 
-#### Change Motor Speed
-| Type | Byte 1 | Byte 2 |
-| ---- | ------ | ------ |
-| Variable Name | message_type | motor_speed |
-| Variable Type | uint8_t | int8_t |
-| Min Value | 0 | 0 |
-| Max Value | 9 | 100 |
-| Example | 0 | 50 |
-
-- This message changes the speed at which the motors will move at. The message begins with the message type allowing the reciever to sort the message easier, then byte 2 is the target speed at which the motor will travel at. The speed value does not control the motor directly just states at what speed all the motors will move at. The message will send to both Divine and Jacob's subsystem and they will update accordingly.
-
-
-#### Drive Individual motor
+### Subsystem Z Status Report
 | Type | Byte 1 | Byte 2 | Byte 3 |
 | ---- | ------ | ------ | ------ |
-| Variable Name | message_type | motor_id | motor_speed |
-| Variable Type | uint8_t | uint8_t | int8_t |
-| Min Value | 0 | 1 | 0 |
-| Max Value | 9 | 2| 100 |
-| Example | 0 | 1 | 30 |
+| Variable Name | message_type | sender_id | status_code |
+| Variable Type | uint8_t | uint8_t | uint8_t |
+| Min Value | 0 | 1 | 1 |
+| Max Value | 8 | 4 | 25 |
+| Example | 7 | 2 | 21 |
 
-- This message is for driving the motors independently so that the user can directly control the motors using the buttons on the robot. Byte 1 in the message is the meesage type allowing the reciever to sort the message easier. Then byte 2 is the motor_id to select which motor the message is targeting. Byte 3 is the speed at which the motor will be moving at. This message would be sent to Jacob's subsytem.
+- <COMMENT>
+
+### Subsystem Z Error Report
+| Type | Byte 1 | Byte 2 | Byte 3 |
+| ---- | ------ | ------ | ------ |
+| Variable Name | message_type | sender_id | error_code |
+| Variable Type | uint8_t | uint8_t | uint8_t |
+| Min Value | 0 | 1 | 1 |
+| Max Value | 8 | 4 | 25 |
+| Example | 8 | 3 | 21 |
+
+- <COMMENT>
 
 ### Messages I Recieve
 
