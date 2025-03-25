@@ -17,13 +17,13 @@ These are messages that the Sensor Subsystem transmits to the rest of the device
 Each table demonstrates the message structure with along with a description of how it works and who will recieve the message.
 
 ### Set Motor 1 to Speed X and Motor 2 to Speed Y
-| Type | Byte 1 | Byte 2 | Byte 3
+| Type | Byte 1 | Byte 2 | Byte 3 |
 | ---- | ------ | ------ |
 | Variable Name | message_type | motor_1_speed | motor_2_speed |
-| Variable Type | uint8_t | uint8_t | uint8_t
-| Min Value | 0 | 0 | 0
-| Max Value | 8 | 100 | 100
-| Example | 2 | 25 | 75
+| Variable Type | uint8_t | uint8_t | uint8_t |
+| Min Value | 0 | 0 | 0 |
+| Max Value | 8 | 100 | 100 |
+| Example | 2 | 25 | 75 |
 
 - <COMMENT>
 
