@@ -18,7 +18,7 @@ Each table demonstrates the message structure with along with a description of h
 
 ### Set Motor 1 to Speed X and Motor 2 to Speed Y
 | Type | Byte 1 | Byte 2 | Byte 3 |
-| ---- | ------ | ------ |
+| ---- | ------ | ------ | ------ |
 | Variable Name | message_type | motor_1_speed | motor_2_speed |
 | Variable Type | uint8_t | uint8_t | uint8_t |
 | Min Value | 0 | 0 | 0 |
