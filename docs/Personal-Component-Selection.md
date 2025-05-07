@@ -61,30 +61,34 @@ The selected concept for the Spring 2025 semester project by team #204  is a bi-
 
 | Module | # Available | Needed | Associated Pins (or * for any) |
 | ---------- | ----------- | ------ | ------------------------------ |
-| GPIO       | 11          | 3      | 2, 3, 4                        |
+| GPIO       | 11          | 3      | 2, 3, 4 , 5, 6, 7, 9,          |
+|	     |		   |	    |	10, 11, 12, 13, 14           |
 | ADC        | -           | 0      | -                              |
 | UART       | 1           | 1      | 6, 7, 25, 26                   |
-| SPI        | -           | 0      | -                              |
-| I2C        | 2           | 1      | (22, 23) or (14, 15)           |
+| SPI        | -           | 0      | 15, 16, 17, 18                 |
+| I2C        | 2           | 1      | 23, 24                         |
 | PWM        | -           | 0      | -                              |
 | ICSP       | 1           | 1      | 1, 27, 28                      |
 | ...        | ...         | ...    | ...                            |
 
-## Setting Up the Pinout Demonstration in MPLABX
-![MC_pins](MS_pins.png) 
+## Pinout and Modules Demonstration in MPLABX
+![PIC18F26Q10_chip_pins](PIC18F26Q10_chippins.png) 
 
 The picture above demonstrates the pin allocation in the PIC18F25Q10 MCU, proposed as the sensor subsystem microcontroller, performed within the MPLAB X software environment. The pin distribution goes as follows:
-UART => pins # 6, 7, 25, 26
-I2C => pins # 22, 23
-Red LED => pin # 2
-Green LED => pin # 3
-PushButton => pin # 4
+_UART_ => pins **# 6, 7, 25, 26**
+_SPI_(back-up serial interface, not intended for use in the standart configuration) => pins **# 15, 16, 17, 18**
+_I2C_ => pins **# 23, 24**
+_Sensor Hardware Interrupt_ => pins **# 5, 6, 7**
+_Voltage Level Translator Output Enable_ => pins **# 9, 10, 11**
+_Red LED_ => pin **# 2**
+_Green LED_ => pin **# 3**
+_PushButton_ => pin **# 4**
+_Reserve GPIO pins_(provided with a male header-type output on the PCB) => pins **# 12, 13, 14**
 	
-The picture below demonstrates the results of “building” and preparing the project for a future debugging under the selected pin allocation
+The picture below demonstrates the detailed outline of the selected pin allocation, sorted by the type and module affiliation(General I/O, UART, SPI, I2C)
 
-![MC_build](MS_build.png) 
+![PIC18F26Q10_pins](PIC18F26Q10_pins.png) 
 
-As visible from the picture, the system analysis confirmed that every allocated pin is available for the assigned functional purpose. The UART and I2C serial communication pins were allocated to the pins, recommended in the MCU’s pin diagram, provided in the manufacturer’s datasheet.
 
 ## Microcontroller Choice 
 ### PIC18F26Q10 Selection Rationale
