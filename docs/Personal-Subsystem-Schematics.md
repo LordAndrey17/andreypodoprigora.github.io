@@ -31,7 +31,7 @@ title: Personal Subsystem Schematics
 
 ## 2) Discussion, Evaluations and Suggestions
 
-
+___
 
 ## 3) Related Links and References
 
