@@ -61,8 +61,7 @@ The selected concept for the Spring 2025 semester project by team #204  is a bi-
 
 | Module | # Available | Needed | Associated Pins (or * for any) |
 | ---------- | ----------- | ------ | ------------------------------ |
-| GPIO       | 11          | 3      | 2, 3, 4 , 5, 6, 7, 9,          |
-|	     |		   |	    |	10, 11, 12, 13, 14           |
+| GPIO       | 11          | 3      | 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14|
 | ADC        | -           | 0      | -                              |
 | UART       | 1           | 1      | 6, 7, 25, 26                   |
 | SPI        | -           | 0      | 15, 16, 17, 18                 |
