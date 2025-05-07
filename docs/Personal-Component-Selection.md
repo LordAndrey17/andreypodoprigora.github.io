@@ -73,7 +73,7 @@ The selected concept for the Spring 2025 semester project by team #204  is a bi-
 ## Pinout and Modules Demonstration in MPLABX
 ![PIC18F26Q10_chip_pins](PIC18F26Q10_chippins.png) 
 
-The picture above demonstrates the pin allocation in the PIC18F65Q10 MCU, proposed as the sensor subsystem microcontroller, performed within the MPLAB X software environment. The pin distribution goes as follows:
+The picture above demonstrates the pin allocation within the PIC18F26Q10, proposed as the sensor subsystem microcontroller, performed within the MPLAB X software environment. The pin distribution goes as follows: <br><br>
 UART => pins **# 6, 7, 25, 26** <br>
 SPI(back-up serial interface, not intended for use in the standart configuration) => pins **# 15, 16, 17, 18** <br>
 I2C => pins **# 23, 24** <br>
