@@ -33,6 +33,6 @@ title: Personal Subsystem Schematics
 
 ## 3) Related Links and References
 
-[Link to the PDF version of the schematics shown above](https://github.com/LordAndrey17/andreypodoprigora.github.io/blob/main/docs/Sensor_Subsystem_Schematics.pdf)
+[Link to the PDF version of the schematics(Motherboard and Daughterboard) shown above](https://github.com/LordAndrey17/andreypodoprigora.github.io/blob/main/docs/Summary_Schematics.pdf)
 
-[Link to the Altium™ project zip archive of the schematics shown above](https://github.com/LordAndrey17/andreypodoprigora.github.io/blob/main/docs/EGR314_Schematic_Design_Podoprigora.zip)
+[Link to the summary Altium™ project zip archivee](https://github.com/LordAndrey17/andreypodoprigora.github.io/blob/main/docs/Podoprigora_Altium_Project_Final_release.zip)
