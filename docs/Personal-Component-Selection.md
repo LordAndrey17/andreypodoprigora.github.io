@@ -82,7 +82,7 @@ Voltage Level Translator Output Enable => pins **# 9, 10, 11** <br>
 Red LED => pin **# 2** <br>
 Green LED => pin **# 3** <br>
 PushButton => pin **# 4** <br>
-Reserve GPIO pins(provided with a male header-type output on the PCB) => pins **# 12, 13, 14** <br>
+Reserve GPIO pins(provided with a male header-type output on the PCB) => pins **# 12, 13, 14** <br><br>
 	
 The picture below demonstrates the detailed outline of the selected pin allocation, sorted by the type and module affiliation(General I/O, UART, SPI, I2C)
 
