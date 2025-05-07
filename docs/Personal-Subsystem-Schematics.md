@@ -31,8 +31,12 @@ title: Personal Subsystem Schematics
 
 ## 2) Discussion, Evaluations and Suggestions
 
+
+
 ## 3) Related Links and References
 
 [Link to the PDF version of the schematics(Motherboard and Daughterboard) shown above](https://github.com/LordAndrey17/andreypodoprigora.github.io/blob/main/docs/Summary_Schematics.pdf)
 
 [Link to the summary Altium™ project zip archive](https://github.com/LordAndrey17/andreypodoprigora.github.io/blob/main/docs/Podoprigora_Altium_Project_Final_release.zip)
+
+[Link to the gerber files zip archive(Motherboard & Daugtherboard)](https://github.com/LordAndrey17/andreypodoprigora.github.io/blob/main/docs/Gerber_Cumulative.zip)
