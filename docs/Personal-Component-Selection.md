@@ -73,16 +73,16 @@ The selected concept for the Spring 2025 semester project by team #204  is a bi-
 ## Pinout and Modules Demonstration in MPLABX
 ![PIC18F26Q10_chip_pins](PIC18F26Q10_chippins.png) 
 
-The picture above demonstrates the pin allocation in the PIC18F25Q10 MCU, proposed as the sensor subsystem microcontroller, performed within the MPLAB X software environment. The pin distribution goes as follows:
-_UART_ => pins **# 6, 7, 25, 26**
-_SPI_(back-up serial interface, not intended for use in the standart configuration) => pins **# 15, 16, 17, 18**
-_I2C_ => pins **# 23, 24**
-_Sensor Hardware Interrupt_ => pins **# 5, 6, 7**
-_Voltage Level Translator Output Enable_ => pins **# 9, 10, 11**
-_Red LED_ => pin **# 2**
-_Green LED_ => pin **# 3**
-_PushButton_ => pin **# 4**
-_Reserve GPIO pins_(provided with a male header-type output on the PCB) => pins **# 12, 13, 14**
+The picture above demonstrates the pin allocation in the PIC18F65Q10 MCU, proposed as the sensor subsystem microcontroller, performed within the MPLAB X software environment. The pin distribution goes as follows:
+UART => pins **# 6, 7, 25, 26**
+SPI(back-up serial interface, not intended for use in the standart configuration) => pins **# 15, 16, 17, 18**
+I2C => pins **# 23, 24**
+Sensor Hardware Interrupt => pins **# 5, 6, 7**
+Voltage Level Translator Output Enable => pins **# 9, 10, 11**
+Red LED => pin **# 2**
+Green LED => pin **# 3**
+PushButton => pin **# 4**
+Reserve GPIO pins(provided with a male header-type output on the PCB) => pins **# 12, 13, 14**
 	
 The picture below demonstrates the detailed outline of the selected pin allocation, sorted by the type and module affiliation(General I/O, UART, SPI, I2C)
 
