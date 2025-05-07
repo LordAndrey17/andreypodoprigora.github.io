@@ -465,8 +465,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#distance-sensor-module" class="md-nav__link">
-    Distance Sensor Module
+  <a href="#updates-and-changes-to-the-component-selection-process" class="md-nav__link">
+    Updates and changes to the Component Selection Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-sensor-selection" class="md-nav__link">
+    Distance Sensor Selection
   </a>
   
 </li>
@@ -603,8 +610,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#distance-sensor-module" class="md-nav__link">
-    Distance Sensor Module
+  <a href="#updates-and-changes-to-the-component-selection-process" class="md-nav__link">
+    Updates and changes to the Component Selection Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-sensor-selection" class="md-nav__link">
+    Distance Sensor Selection
   </a>
   
 </li>
@@ -648,8 +662,11 @@
 
 <h1 id="1-major-component-selection">1. Major Component Selection</h1>
 <h2 id="inroduction-to-the-component-selection-process">Inroduction to the Component Selection Process</h2>
-<p>The type of sensor proposed and selected earlier for this semester’s group project is a <strong>distance measuring</strong> sensor. Nowadays, a variety of physical phenomena is utilised to create this type of sensors, including, but not limited to: infrared emitting, ultrasonic “listening” and laser-based detection. Taking into account the guidelines of the current project, the sensor selection process was performed under the following considerations: the sensor chip should incorporate at least 1 serial communication protocol; the sensor chip should not come from the manufacturer as a part of “daughterboard”-type PCB, unless the chip itself is too small to be manually soldered on the self-designed PCB. The results of this selection are presented below: </p>
-<h2 id="distance-sensor-module">Distance Sensor Module</h2>
+<p>The type of sensor proposed and selected earlier for this semester’s group project is a <strong>distance measuring</strong> sensor. Nowadays, a variety of physical phenomena is utilised to create this type of sensors, including, but not limited to: infrared emitting, ultrasonic “listening” and laser-based detection. Taking into account the guidelines of the current project, the sensor selection process was performed under the following considerations: the sensor chip should incorporate at least 1 serial communication interface(I2C, SPI or UART); the sensor chip should not come from the manufacturer as a part of “daughterboard”-type PCB, unless the chip itself is too small or excessively complex to be manually soldered on the self-designed PCB (although the team member can decide to either incorporate the sensor into a single PCB with MCU, or to allocate it to its own "daughterboard", the second option is more preferred considering the project's device format and the correlated need to dislocate at least three sensors, poitning into different directions from the horizontal plane)</p>
+<h2 id="updates-and-changes-to-the-component-selection-process">Updates and changes to the Component Selection Process</h2>
+<p>Although, the Component Selection configuration depicted on this webpage wasn't radically modified or adjusted, a couple of noticeable changes were inevitable to occur along the path of correcting the previously-unknown structural discrepancies and ineffective electrical/mechanical solutions. 
+One of the most important updates, is the so-called "paradigm shift" in regards to the approach of organizing the power delivery to the distance sensors. As it was mentioned in the previous documents(e.g. Block Diagram), the powering scheme of the ToF distance sensors was defined to rely on a 2.8V supply, instead of a standartised 3.3V. In order to account for this design rule, the first version of the Component Selection utline offered a "one-at-a-time" solution - each sensor daughterboard was supposed ot be equipped with its own 2.8V LDO Voltage regulator</p>
+<h2 id="distance-sensor-selection">Distance Sensor Selection</h2>
 <table>
 <thead>
 <tr>
@@ -680,24 +697,7 @@
 <p>Option #1 =&gt; <strong>VL53L4CD</strong> Time-of-Flight high accuracy low power proximity sensor</p>
 <h2 id="rationale">Rationale:</h2>
 <p>Based on the data, presented in the chart above, the most reasonable choice for the sensor subsystem in the scope of the current project would be the <strong>VL53L4CD</strong> (option #1). It possesses adequate object detection range (up to 1.3) meters, provided with a modern and well-supported API for a system driver, and, what is especially important being reminded the usage context - distance sensor within an object-following robot - it can communicate with the Host MCU at the rate of 1 MHz across the I2C channel. In comparison to it, <strong>VL53L8CH</strong> (option #2) would clearly be an “overkill” - even despite the double price range in comparison to the first option, it is simply “overprovided” with excessive functionality, that wouldn’t be much relevant within the scope of the project(multizone data output, 4x4 matrix for gathering data from the multiple points within the FoV at a time, AI-supported features). At the same time, the <strong>VL53L1CXV0FY/1</strong> (option #3) looks a lot similar to the option #1, however, it possess a significant drawback, represented by its I2C communication speed being less than half of the same parameter from <strong>VL53L4CD</strong>  - 400 kHz to 1 MHz - which may significantly affect the operation potential of a fast-moving system, such as the team project’s future robot.</p>
-<h1 id="2-low-dropout-voltage-regulator-28v-selection">2. Low Dropout Voltage Regulator (2.8V) Selection</h1>
-<table>
-<thead>
-<tr>
-<th><strong>Solution</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a class="glightbox" href="../LP3985.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../LP3985.png" /></a><br>* Option 1.<br><br>* LP3985 Micropower, 150-mA Low-Noise Ultra-Low-Dropout CMOS Voltage Regulator <br><br>* $0.45/each <br><br>* <a href="https://www.mouser.com/ProductDetail/Texas-Instruments/LP3985IM5-28-NOPB?qs=1FNqv8aZn1RHlx0XcZV7CQ%3D%3D&amp;mgh=1&amp;utm_id=17222215321&amp;utm_source=google&amp;utm_medium=cpc&amp;utm_marketing_tactic=amercorp&amp;gad_source=1&amp;gclid=CjwKCAiAlPu9BhAjEiwA5NDSA1-lmcOVf7dfIfJtHzIcH-mckVNu4x45atozwo4YggQ7jqQqmPgLqhoCDSAQAvD_BwE">link to product</a></td>
-<td>* Performance is optimized for battery-powered systems to deliver ultra-low noise<br>* Regulator ground current increases only slightly in dropout<br>* Delivers extremely small dropout voltage</td>
-<td>* ---<br>* ---</td>
-</tr>
-</tbody>
-</table>
-<h1 id="3-switching-regulator-33v-selection">3. Switching Regulator (3.3V) Selection</h1>
+<h1 id="2-switching-regulator-33v-selection">2. Switching Regulator (3.3V) Selection</h1>
 <table>
 <thead>
 <tr>
@@ -714,6 +714,7 @@
 </tr>
 </tbody>
 </table>
+<h1 id="3-voltage-level-translator-selection">3. Voltage Level Translator Selection</h1>
 <h1 id="4-microcontroller-selection">4. Microcontroller Selection</h1>
 <h2 id="declaration-of-personal-role-responsibilities-within-the-team">Declaration of Personal Role &amp; Responsibilities Within the Team</h2>
 <p>The selected concept for the Spring 2025 semester project by team #204  is a bi-wheeled robot with object-following capabilities. Within the scope of this project, my primary responsibility area is focused around <strong>sensing functionality</strong> of the proposed robotic device. In this regard, I proposed the design involving placement of 3 identical Time-of-Flight(ToF) sensors in the frontal part of the robot, each directed outwards to the robot’s center  in order to increase the Field of View available to the device. The process of selecting the actual market-available sensor solution was performed earlier in this document(the final choice was identified to be VL53L4CD). In order to transfer the observed data to the Host MCU, all three sensors will be using a single I2C bus (the approximated communication speed is expected to vary between 0.75-1 MHz). After the data was received and pre-processed(e.g. unit conversion) by the Host MCU, it will then be transferred to the neighboring MCU in the systems’ UART daisy chain.</p>
