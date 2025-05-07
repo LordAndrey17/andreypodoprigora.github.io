@@ -852,7 +852,7 @@ Along with this, in order to sycnhronise and balance the serial communication be
 </tbody>
 </table>
 <h2 id="pinout-and-modules-demonstration-in-mplabx">Pinout and Modules Demonstration in MPLABX</h2>
-<p><a class="glightbox" href="PIC18F26Q10_chippins.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PIC18F26Q10_chip_pins" src="PIC18F26Q10_chippins.png" /></a> </p>
+<p><a class="glightbox" href="../PIC18F26Q10_chippins.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PIC18F26Q10_chip_pins" src="../PIC18F26Q10_chippins.png" /></a> </p>
 <p>The picture above demonstrates the pin allocation within the PIC18F26Q10, proposed as the sensor subsystem microcontroller, performed within the MPLAB X software environment. The pin distribution goes as follows: <br><br>
 UART =&gt; pins <strong># 6, 7, 25, 26</strong> <br>
 SPI(back-up serial interface, not intended for use in the standart configuration) =&gt; pins <strong># 15, 16, 17, 18</strong> <br>
@@ -864,7 +864,7 @@ Green LED =&gt; pin <strong># 3</strong> <br>
 PushButton =&gt; pin <strong># 4</strong> <br>
 Reserve GPIO pins(provided with a male header-type output on the PCB) =&gt; pins <strong># 12, 13, 14</strong> <br><br></p>
 <p>The picture below demonstrates the detailed outline of the selected pin allocation, sorted by the type and module affiliation(General I/O, UART, SPI, I2C)</p>
-<p><a class="glightbox" href="PIC18F26Q10_pins.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PIC18F26Q10_pins" src="PIC18F26Q10_pins.png" /></a> </p>
+<p><a class="glightbox" href="../PIC18F26Q10_pins.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PIC18F26Q10_pins" src="../PIC18F26Q10_pins.png" /></a> </p>
 <h2 id="microcontroller-choice">Microcontroller Choice</h2>
 <h3 id="pic18f26q10-selection-rationale">PIC18F26Q10 Selection Rationale</h3>
 <p>I perceive the PIC18F26Q10 to be the optimal choice for the sensor subsystem of the robotic device proposed within our team’s project. While being a part of a high-performing PIC18 chip family, this chip hosts only 28 pins in comparison to the standard 40-pin PIC18F47Q10 chip that is used as a general purpose MCU within the EGR314 course. By excluding 12 excess pins, the PIC18F26Q10 will help to reduce the size of both the subsystem’s PCB and project’s device - which is definitely important, being reminded the context of the devices’ operation - mobile, fast-moving robot. Along with this, the selected MCU’s operating speed of 64 MHz will be capable of providing instant communication with both the UART-based neighbor MCU-s, and three ToF sensors, placed on a single I2C bus(each operating on approximate communication speed of 1MHz), while 2048 bytes of RAM and 32K bytes of Flash Memory will provide for the flawless processing of the data received from the mentioned sensors. </p>
