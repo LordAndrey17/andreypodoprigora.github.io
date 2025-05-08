@@ -499,9 +499,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-adjustable-switching-regulator-33v-and-28v-selection" class="md-nav__link">
-    2. Adjustable Switching Regulator (3.3V and 2.8V) Selection
+  <a href="#2-switching-regulator-33v-and-28v-selection" class="md-nav__link">
+    2. Switching Regulator (3.3V and 2.8V) Selection
   </a>
+  
+    <nav class="md-nav" aria-label="2. Switching Regulator (3.3V and 2.8V) Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choice_1" class="md-nav__link">
+    Choice:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rationale_1" class="md-nav__link">
+    Rationale:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -712,9 +732,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-adjustable-switching-regulator-33v-and-28v-selection" class="md-nav__link">
-    2. Adjustable Switching Regulator (3.3V and 2.8V) Selection
+  <a href="#2-switching-regulator-33v-and-28v-selection" class="md-nav__link">
+    2. Switching Regulator (3.3V and 2.8V) Selection
   </a>
+  
+    <nav class="md-nav" aria-label="2. Switching Regulator (3.3V and 2.8V) Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choice_1" class="md-nav__link">
+    Choice:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rationale_1" class="md-nav__link">
+    Rationale:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -834,7 +874,7 @@ Along with this, in order to sycnhronise and balance the serial communication be
 <p>Option #1 =&gt; <strong>VL53L4CD</strong> Time-of-Flight high accuracy low power proximity sensor</p>
 <h3 id="rationale">Rationale:</h3>
 <p>Based on the data, presented in the chart above, the most reasonable choice for the sensor subsystem in the scope of the current project would be the <strong>VL53L4CD</strong> (option #1). It possesses adequate object detection range (up to 1.3) meters, provided with a modern and well-supported API for a system driver, and, what is especially important being reminded the usage context - distance sensor within an object-following robot - it can communicate with the Host MCU at the rate of 1 MHz across the I2C channel. In comparison to it, <strong>VL53L8CH</strong> (option #2) would clearly be an “overkill” - even despite the double price range in comparison to the first option, it is simply “overprovided” with excessive functionality, that wouldn’t be much relevant within the scope of the project(multizone data output, 4x4 matrix for gathering data from the multiple points within the FoV at a time, AI-supported features). At the same time, the <strong>VL53L1CXV0FY/1</strong> (option #3) looks a lot similar to the option #1, however, it possess a significant drawback, represented by its I2C communication speed being less than half of the same parameter from <strong>VL53L4CD</strong>  - 400 kHz to 1 MHz - which may significantly affect the operation potential of a fast-moving system, such as the team project’s future robot.</p>
-<h2 id="2-adjustable-switching-regulator-33v-and-28v-selection">2. Adjustable Switching Regulator (3.3V and 2.8V) Selection</h2>
+<h2 id="2-switching-regulator-33v-and-28v-selection">2. Switching Regulator (3.3V and 2.8V) Selection</h2>
 <table>
 <thead>
 <tr>
@@ -850,12 +890,16 @@ Along with this, in order to sycnhronise and balance the serial communication be
 <td>* The offered packaging is relatively big compared to the alternatives, meaning that less space is available on the motherboard for the rest of the circuitry<br>* Noticeable pin size -&gt; might be problematic for standart SMD soldering throuhg the hot air reflow, might require soldering iron</td>
 </tr>
 <tr>
-<td><a class="glightbox" href="../lm2575.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../lm2575.png" /></a><br>* Option 1.<br><br>* LM2575 Swithcing Voltage Regulator <br><br>* $1.27/each <br><br>* <a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2575SX-ADJ-NOPB/366783">link to product</a></td>
-<td>* Includes a fixed-frequency oscillator<br>* Incorporates internal frequency compensation<br>* The feedback voltage is guaranteed ot +- 2% tolerance<br> * Output can be easily adjusted from from 1.23 to 37 V(!!!) based on different voltage-dividing resistors combinations</td>
-<td>* The offered packaging is relatively big compared to the alternatives, meaning that less space is available on the motherboard for the rest of the circuitry<br>* Noticeable pin size -&gt; might be problematic for standart SMD soldering throuhg the hot air reflow, might require soldering iron</td>
+<td><a class="glightbox" href="../L4971.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../L4971.jpg" /></a><br>* Option 2.<br><br>* L4971D Step-Down Swithcing Voltage Regulator <br><br>* $3.7/each <br><br>* <a href="https://www.digikey.com/en/products/detail/stmicroelectronics/L4971D/585932">link to product</a></td>
+<td>* Includes a fixed-frequency oscillator<br>* Incorporates internal frequency compensation<br>* Delivers an Output of 1.5A and 3-50V(selected by external voltage divider configuration)</td>
+<td>* The offered SMD-type SO16W packaging presents a chip with a whole 16 contacts, which might raise the complexity of the soldering process<br>* Requires at least 11(!) supplementary circuit elements(capacitors, resistors, inductors) for basic configuration, which is noticeably higher than the same amount within alternatives</td>
 </tr>
 </tbody>
 </table>
+<h3 id="choice_1">Choice:</h3>
+<p>Option #1 =&gt; LM2575 Swithcing Voltage Regulator</p>
+<h3 id="rationale_1">Rationale:</h3>
+<p>LM2575 seems to be the most confident choice for the Voltage Regulator within the current project. It was well studied in class, expecially through breadboard-based implementation examples. Considering the selected packaging type, it will be relatively easy for soldering both through the hot air reflow and traditional, iron-based heating methods. Along with this, it is currently provided within the low price range, so it becomes possible to order more parts at a time, already accounting for potential future assembly and soldering issues</p>
 <h2 id="3-voltage-level-translator-selection">3. Voltage Level Translator Selection</h2>
 <table>
 <thead>
