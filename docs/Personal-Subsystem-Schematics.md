@@ -31,6 +31,7 @@ title: Personal Subsystem Schematics
 ### Final Bill of Materials 
 ![scheme_09](PBOM.png "Personal Subsystem Schematics")
 
+<br>
 ## 2) Discussion, Evaluations and Suggestions
 In order to find out how the board, captured on the diagrams above, had "shown itself in the field", we decided to directly ask the creator, Andrey Podoprigora! Here is what he told us about his experience of working with the board during the last two months:
   -"Thank you so much for contacting me on that occasion! I will be more than happy to share my experience and feelings about this particular PCB project!!!”
