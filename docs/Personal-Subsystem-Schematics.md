@@ -33,7 +33,8 @@ title: Personal Subsystem Schematics
 
 ## 2) Discussion, Evaluations and Suggestions
 
-___
+In order to find out how the board, captured on the diagrams above, had "shown itself in practice", we decided to directly ask about it the creator, Andrey Podoprigora. Here is what he told us about his experience of working with the board during the last two months!:
+" - Thank you so much for contacting me on that occasion"
 
 ## 3) Related Links and References
 
